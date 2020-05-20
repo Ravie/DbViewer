@@ -20,6 +20,7 @@ import androidx.navigation.ui.setupWithNavController
 import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
 import com.google.android.material.snackbar.Snackbar
+import com.netcracker.dbviewer.ui.addresses.AddressListFragment
 import com.netcracker.dbviewer.ui.customers.CustomerListFragment
 import com.netcracker.dbviewer.ui.hardware.HardwareListFragment
 import com.netcracker.dbviewer.ui.services.ServiceListFragment
@@ -69,6 +70,9 @@ class MainActivity : AppCompatActivity() {
                 }
                 R.id.nav_hardware_button -> {
                     fragment = HardwareListFragment.newInstance()
+                }
+                R.id.nav_address_button -> {
+                    fragment = AddressListFragment.newInstance()
                 }
             }
         } catch (e: Exception) {

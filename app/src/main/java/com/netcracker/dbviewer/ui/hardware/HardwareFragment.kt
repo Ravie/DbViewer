@@ -1,6 +1,5 @@
 package com.netcracker.dbviewer.ui.hardware
 
-import android.net.Uri
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -18,7 +17,6 @@ import com.netcracker.dbviewer.services.RestApiService
 import com.netcracker.dbviewer.services.SearchRepositoryProvider
 import kotlinx.android.synthetic.main.fragment_hardware.*
 import kotlinx.android.synthetic.main.fragment_hardware.view.*
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -148,7 +146,7 @@ class HardwareFragment(id: Long) : Fragment() {
         val curAddress = hardware_info.sp_hardware_address.selectedItem.toString()
         for (address in addresses) {
             if (address.fullAddress == curAddress) {
-                repository.saveAddress("addresses/${address.id}", hardwareId).enqueue(object : Callback<Void> {
+                repository.saveHardwareAddress("addresses/${address.id}", hardwareId).enqueue(object : Callback<Void> {
                     override fun onFailure(call: Call<Void>?, t: Throwable?) {
                         Log.d(className, t?.localizedMessage.orEmpty())
                     }

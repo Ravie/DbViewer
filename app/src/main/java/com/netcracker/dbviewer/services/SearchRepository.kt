@@ -67,8 +67,12 @@ class SearchRepository(private val apiService: RestApiService) {
         return apiService.searchAddressByHardware(hardwareId)
     }
 
-    fun saveAddress(link: String, hardwareId: Long): Call<Void> {
-        return apiService.saveAddress(link, hardwareId)
+    fun saveHardwareAddress(link: String, hardwareId: Long): Call<Void> {
+        return apiService.saveHardwareAddress(link, hardwareId)
+    }
+
+    fun saveAddress(address: Address): Call<Address> {
+        return apiService.saveAddress(address)
     }
 
 }

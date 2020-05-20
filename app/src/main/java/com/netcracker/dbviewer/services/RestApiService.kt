@@ -56,7 +56,11 @@ interface RestApiService {
 
     @Headers("Content-Type: text/uri-list")
     @PUT("hardwares/{id}/address")
-    fun saveAddress(@Body link: String, @Path("id") hardwareId: Long): Call<Void>
+    fun saveHardwareAddress(@Body link: String, @Path("id") hardwareId: Long): Call<Void>
+
+    @Headers("Content-Type: application/json")
+    @POST("addresses")
+    fun saveAddress(@Body address: Address): Call<Address>
 
     companion object Factory {
         fun create(): RestApiService {
