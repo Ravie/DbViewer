@@ -17,7 +17,6 @@ import com.netcracker.dbviewer.services.SearchRepositoryProvider
 import com.netcracker.dbviewer.ui.hardware.HardwareListFragment
 import kotlinx.android.synthetic.main.fragment_service.*
 import kotlinx.android.synthetic.main.fragment_service.view.*
-import kotlinx.android.synthetic.main.fragment_service.view.button
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -64,7 +63,7 @@ class ServiceFragment(id: Long) : Fragment() {
     }
 
     private fun showHardwareList() {
-        service_info.showHardwares.setOnClickListener {
+        service_info.show_hardwares.setOnClickListener {
             var fragment: Fragment? = null
             val bundle = Bundle()
             bundle.putLong("serviceId", serviceId)

@@ -27,9 +27,8 @@
     <string name="showServices">Show customer\'s services</string>
     <string name="toolbar_title">Toolbar Title</string>
     <string name="name">Name</string>
-    <string name="showHardwares">Show service\'s hardwares</string>
+    <string name="show_hardwares">Show service\'s hardwares</string>
     <string name="serial">Serial</string>
     <string name="address">Address</string>
     <string name="menu_address_list">Address List</string>
-    <string name="showHardwaresOnAddress">Show all hardware on this address</string>
 </resources>

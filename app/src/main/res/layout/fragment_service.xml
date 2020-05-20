@@ -67,10 +67,10 @@
         android:padding="16dp">
 
         <Button
-            android:id="@+id/showHardwares"
+            android:id="@+id/show_hardwares"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/showHardwares" />
+            android:text="@string/show_hardwares" />
     </LinearLayout>
 
 
