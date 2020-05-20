@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_customer_list">
+
+    <fragment
+        android:id="@+id/nav_customer_list"
+        android:name="com.netcracker.dbviewer.ui.customers.CustomerListFragment"
+        android:label="@string/menu_customer_list"
+        tools:layout="@layout/fragment_customer_list" >
+        <action
+            android:id="@+id/action_nav_customer_list_to_nav_customer"
+            app:destination="@id/nav_customer" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_hardware_list"
+        android:name="com.netcracker.dbviewer.ui.hardware.HardwareListFragment"
+        android:label="@string/menu_hardware_list"
+        tools:layout="@layout/fragment_hardware_list" >
+        <action
+            android:id="@+id/action_nav_hardware_list_to_nav_hardware"
+            app:destination="@id/nav_hardware" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_service_list"
+        android:name="com.netcracker.dbviewer.ui.services.ServiceListFragment"
+        android:label="@string/menu_service_list"
+        tools:layout="@layout/fragment_service_list" >
+        <action
+            android:id="@+id/action_nav_service_list_to_nav_service"
+            app:destination="@id/nav_service" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_customer"
+        android:name="com.netcracker.dbviewer.ui.customers.CustomerFragment"
+        android:label="@string/menu_customer"
+        tools:layout="@layout/fragment_customer" />
+
+    <fragment
+        android:id="@+id/nav_hardware"
+        android:name="com.netcracker.dbviewer.ui.hardware.HardwareFragment"
+        android:label="@string/menu_hardware"
+        tools:layout="@layout/fragment_hardware" />
+
+    <fragment
+        android:id="@+id/nav_service"
+        android:name="com.netcracker.dbviewer.ui.services.ServiceFragment"
+        android:label="@string/menu_service"
+        tools:layout="@layout/fragment_service" />
+</navigation>
