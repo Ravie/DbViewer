@@ -37,6 +37,16 @@
     </fragment>
 
     <fragment
+        android:id="@+id/nav_address_list"
+        android:name="com.netcracker.dbviewer.ui.addresses.AddressListFragment"
+        android:label="@string/menu_address_list"
+        tools:layout="@layout/fragment_address_list">
+        <action
+            android:id="@+id/action_nav_address_list_to_nav_address"
+            app:destination="@id/nav_address" />
+    </fragment>
+
+    <fragment
         android:id="@+id/nav_customer"
         android:name="com.netcracker.dbviewer.ui.customers.CustomerFragment"
         android:label="@string/menu_customer"
@@ -53,4 +63,10 @@
         android:name="com.netcracker.dbviewer.ui.services.ServiceFragment"
         android:label="@string/menu_service"
         tools:layout="@layout/fragment_service" />
+
+    <fragment
+        android:id="@+id/nav_address"
+        android:name="com.netcracker.dbviewer.ui.addresses.AddressFragment"
+        android:label="@string/menu_address"
+        tools:layout="@layout/fragment_address" />
 </navigation>

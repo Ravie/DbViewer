@@ -14,8 +14,6 @@ import com.netcracker.dbviewer.services.RestApiService
 import com.netcracker.dbviewer.services.SearchRepositoryProvider
 import kotlinx.android.synthetic.main.fragment_address.*
 import kotlinx.android.synthetic.main.fragment_address.view.*
-import kotlinx.android.synthetic.main.fragment_address_list.*
-import org.json.JSONObject
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
@@ -46,7 +44,7 @@ class AddressFragment : Fragment()  {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_address, container, false)
         val toolbar = activity?.findViewById<Toolbar>(R.id.toolbar)
-        toolbar?.title = "Customer Info"
+        toolbar?.title = "New Address"
         return view
     }
 

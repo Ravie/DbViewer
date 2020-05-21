@@ -4,7 +4,6 @@ import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.view.View
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
 import androidx.core.view.GravityCompat
@@ -17,9 +16,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.navigateUp
 import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
-import com.google.android.material.floatingactionbutton.FloatingActionButton
 import com.google.android.material.navigation.NavigationView
-import com.google.android.material.snackbar.Snackbar
 import com.netcracker.dbviewer.ui.addresses.AddressListFragment
 import com.netcracker.dbviewer.ui.customers.CustomerListFragment
 import com.netcracker.dbviewer.ui.hardware.HardwareListFragment
@@ -45,7 +42,12 @@ class MainActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
-            setOf(R.id.nav_customer_list, R.id.nav_service_list, R.id.nav_hardware_list),
+            setOf(
+                R.id.nav_customer_list,
+                R.id.nav_service_list,
+                R.id.nav_hardware_list,
+                R.id.nav_address_list
+            ),
             drawerLayout
         )
         setupActionBarWithNavController(navController, appBarConfiguration)
